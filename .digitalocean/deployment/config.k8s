@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: logitsa-frontend
+spec:
+  selector:
+    matchLabels:
+      app: logitsa-frontend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: logitsa-frontend
+    spec:
+      containers:
+      - name: web
+        image: <IMAGE>
+        env:
+          - name: BASE_URL
+            value: /logitsa
+          - name: PUBLIC_URL
+            value: /logitsa
+          - name: VITE_APP_BACKEND_IMAGES
+            value: https://staging.qantamedia.com/logitsa/api
+          - name: VITE_APP_BACKEND_URL
+            value: https://staging.qantamedia.com/logitsa/api/graphql
+          - name: VITE_API_URL
+            value: https://staging.qantamedia.com/logitsa/api
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: logitsa-frontend
+spec:
+  selector:
+    app: logitsa-frontend
+  ports:
+  - name: logitsa-frontend
+    port: 80

@@ -1,0 +1,22 @@
+.commitmentContainer {
+  @apply w-full flex justify-center flex-col items-center mx-auto mt-40 text-center md:text-left relative text-carbonBlue;
+  .textContainer {
+    @apply w-[90%];
+    h2 {
+      @apply mx-auto font-bold text-3xl sm:text-4xl xl:text-5xl mb-11 xl:mb-12;
+    }
+    p {
+      @apply mb-3 xl:px-0 xl:mb-6 text-base xl:text-xl font-[460] max-w-[1500px];
+      &:last-of-type {
+        @apply mb-20;
+      }
+    }
+  }
+
+  .mobileDesk {
+    @apply flex md:hidden flex-col mx-2 gap-5 justify-center w-full items-center my-16;
+    img {
+      @apply w-[50%] my-8;
+    }
+  }
+}

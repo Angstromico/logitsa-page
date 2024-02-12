@@ -1,0 +1,20 @@
+FROM node:18
+
+ARG VITE_APP_BACKEND_URL=/
+ARG VITE_API_INTERNAL_URL=/
+ARG PUBLIC_URL=/
+ARG BASE_URL=/
+ARG VITE_APP_BACKEND_IMAGES=/
+ENV  NODE_TLS_REJECT_UNAUTHORIZED=0
+
+WORKDIR /app
+
+COPY package.json package-lock.json ./
+
+RUN npm install
+
+COPY . .
+
+RUN npm run build
+
+CMD npm run serve

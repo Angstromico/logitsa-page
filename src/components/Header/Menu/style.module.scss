@@ -1,0 +1,16 @@
+.menu {
+  @apply fixed top-0 left-0 z-[100] flex w-full flex-row justify-between bg-transparent text-white  p-[1.5em];
+
+  .logo {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .items {
+    @apply hidden xl:flex gap-9 items-center flex-row;
+  }
+
+  .itemsMobile {
+    @apply flex gap-4 items-center justify-center flex-col absolute top-16 right-[-2rem] transition-all text-sm w-32;
+  }
+}

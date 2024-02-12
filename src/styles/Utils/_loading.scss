@@ -1,0 +1,18 @@
+.flexCenter {
+  @apply flex justify-center items-center;
+}
+
+.loadingContainer {
+  @extend .flexCenter;
+  @apply w-full h-[100vh] flex-col;
+  .imgContainer {
+    @extend .flexCenter;
+    @apply bg-carbonBlue rounded-[100%] w-44 h-44 sm:w-52 sm:h-52 md:w-60 md:h-60;
+    img {
+      @apply w-[60%] md:w-[50%] animate-spin;
+    }
+  }
+  h2 {
+    @apply text-base sm:text-lg md:text-xl animate-ping text-center bg-cBlue p-1 rounded font-bold text-white mt-16;
+  }
+}

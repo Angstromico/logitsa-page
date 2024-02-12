@@ -1,0 +1,122 @@
+.cContainer {
+  @apply py-10  lg:py-16 w-full text-carbonBlue flex flex-col xl:flex-row-reverse relative xl:mb-16 overflow-hidden;
+  .imageContainer {
+    @apply flex relative items-center justify-center w-full max-w-7xl;
+    img {
+      @apply xl:absolute mt-6 xl:mt-0 xl:top-24 right-0  z-10 w-52 xl:w-[80%] h-auto max-w-[500px];
+      transform: translateX(350%);
+      &.homeSecond {
+        @apply xl:right-[70%] z-10;
+      }
+    }
+    img.slideToView {
+      animation: sliderLeft 0.8s forwards;
+    }
+    img.biggerImg {
+      @apply xl:mt-3 xl:w-[25rem] xl:h-[25rem] 2xl:w-[80%] max-w-[550px] 2xl:h-auto xl:top-48;
+    }
+    img.biggerImg.slideToView {
+      animation: sliderMoreLeft 0.8s forwards;
+    }
+  }
+  .square {
+    @apply h-[400px] xl:h-[600px] 2xl:h-[800px] w-[90%] max-w-[500px] xl:max-w-full xl:w-full flex justify-center items-center mx-auto mb-[-5rem] lg:mb-0;
+    img {
+      @apply h-[55%] w-[90%] md:w-[400px] xl:w-[500px] 2xl:w-[600px];
+    }
+  }
+  .textContainer {
+    @apply pt-8 xl:pt-16 w-full  mx-2 px-2 xl:ml-4 xl:mr-4;
+    &.homeSecond {
+      @apply xl:pl-72 2xl:ml-[-10rem];
+    }
+    h2 {
+      @apply text-center xl:text-left font-bold text-2xl xl:text-5xl mb-11 xl:mb-12;
+    }
+    p {
+      @apply mb-3 px-7 xl:px-0 xl:mb-6 text-base xl:text-xl font-[460];
+      &:first-of-type {
+        @apply mt-3 xl:mt-9;
+      }
+    }
+    ul {
+      @apply mx-auto max-w-sm xl:max-w-none px-4 sm:px-2;
+      li {
+        @apply list-disc text-base xl:text-lg xl:ml-4 text-left;
+      }
+    }
+    a {
+      @apply bg-carbonBlue text-xl text-white py-2 px-3 rounded shadow-sm;
+    }
+  }
+}
+
+.cContainer.square {
+  @apply xl:mt-[-25rem];
+}
+
+.cContainer.sq {
+  @apply mx-auto;
+}
+
+@keyframes sliderLeft {
+  0% {
+    transform: translateX(350%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes sliderMoreLeft {
+  0% {
+    transform: translateX(350%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.cContainer.reverse {
+  @apply xl:flex-row text-center xl:text-left overflow-visible xl:pb-[7rem] gap-0;
+  .imageContainer {
+    img {
+      @apply left-0;
+      &.homeSecond {
+        @apply xl:left-[80%];
+      }
+      transform: translate(-350%);
+      &.slideToView {
+        animation: sliderRight 0.8s forwards;
+      }
+      &.guanacaste {
+        @apply left-0;
+      }
+    }
+  }
+  .textContainer.close {
+    @apply xl:ml-[-9rem] 2xl:ml-[-28rem];
+  }
+}
+
+@keyframes sliderRight {
+  0% {
+    transform: translateX(-350%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.cContainer.secundary {
+  @apply text-center xl:text-left xl:pb-64 xl:mt-24 mb-0 overflow-hidden xl:mb-16;
+  .textContainer {
+    @apply xl:ml-16;
+  }
+}
+
+.cContainer.reverse.align {
+  h2 {
+    @apply lg:ml-20;
+  }
+}

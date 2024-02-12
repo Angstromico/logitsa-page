@@ -1,0 +1,91 @@
+.footer {
+  @apply relative flex flex-col justify-center bg-carbonBlue text-white w-full items-center py-8 px-16 text-xs z-0;
+  &::before {
+    content: '';
+    @apply absolute top-0 left-0 bg-[url('../../assets/img/bg-footer.png')] bg-cover bg-no-repeat bg-center w-full h-full z-10;
+  }
+  .logo {
+    @apply mb-4 pt-4 z-20 min-w-[10rem];
+  }
+  .logos {
+    @apply flex justify-center mb-8 items-center w-full;
+    .images {
+      @apply flex justify-evenly items-center w-full h-[800px] sm:h-[400px] md:h-[400px] flex-wrap gap-5 md:mb-0;
+      .divider {
+        @apply w-[1.5px] sm:h-full bg-white lg:flex justify-evenly items-center h-full hidden md:h-28;
+      }
+      .logo {
+        @apply px-4 my-auto max-h-48;
+      }
+    }
+  }
+  a {
+    @apply z-20;
+    cursor: pointer;
+  }
+  p {
+    @apply text-base md:text-lg font-light;
+  }
+
+  .sectionMiddle {
+    @apply w-[100%] max-w-[130rem] grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-8 mx-auto z-20;
+    .socialMedia,
+    .contactSection,
+    .location {
+      @apply relative;
+      .whiteLine {
+        @apply md:absolute md:hidden h-[1px] bg-white w-[80%] max-w-[200px] min-w-[150px]  top-0 md:h-full md:w-[1px] md:min-w-[1px] right-0 mb-5;
+      }
+    }
+    .contactSection {
+      @apply items-center justify-center flex flex-col gap-y-8 w-full order-1;
+      .contactContainer {
+        @apply items-center justify-center flex flex-col w-full;
+        img {
+          @apply mb-5;
+        }
+      }
+    }
+    .socialMedia {
+      @apply flex flex-col items-center justify-center gap-4 gap-y-4 w-full sm:w-auto order-2 md:order-3;
+      .socials {
+        @apply flex md:flex-col items-center justify-evenly gap-4 gap-y-4 w-full py-5;
+      }
+      .link {
+        @apply w-full flex flex-col justify-center items-center;
+      }
+      .icon1 {
+        @apply h-6 w-6;
+      }
+      .icon2 {
+        @apply h-8 w-8;
+      }
+    }
+    .location {
+      @apply flex flex-col items-center justify-center gap-4 gap-y-4 w-full sm:w-auto order-3 md:order-2 md:px-8;
+      .whiteLineLeft,
+      .whiteLineRight {
+        @apply absolute hidden md:block bg-white w-[1px] top-0 h-[97%];
+      }
+      .whiteLineLeft {
+        @apply left-0;
+      }
+      .whiteLineRight {
+        @apply right-0;
+      }
+      .locationContainer {
+        @apply w-full flex flex-col justify-center items-center;
+      }
+      img {
+        @apply mb-5;
+      }
+      .link {
+        @apply w-full flex flex-col justify-center items-center;
+      }
+    }
+  }
+}
+
+.mapContainer {
+  @apply w-full h-[250px] md:h-[450px] mx-auto my-6 z-20;
+}

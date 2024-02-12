@@ -1,0 +1,41 @@
+@use 'Utils';
+@use 'reset';
+
+:root {
+  --primary: var(--yellow);
+  --white: #fff;
+  --yellow: #d3bc2a;
+  --header-gray: #2c2d2f;
+  --header-gray-opacity: rgba(44, 45, 47, 0.5);
+  --danger: red;
+  --black: #000;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 1.1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @apply bg-[url('../assets/img/bg-pink.png')] bg-cover bg-center;
+  line-height: 1.4;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.shadowCustom {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
